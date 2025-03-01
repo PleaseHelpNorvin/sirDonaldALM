@@ -13,11 +13,17 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="btn btn-light ml-3" href="{{ route('login.view') }}">logout</a>
+                    <!-- Hidden Form for Logout -->
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+
+                    <!-- Logout Button -->
+                    <a class="btn btn-light ml-3" href="#" 
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        Logout
+                    </a>
                 </li>
-                <!-- <li class="nav-item">
-                    <a class="btn btn-light ml-3" href="{{ route('register.view') }}">Register</a>
-                </li> -->
             </ul>
         </div>
     </div>
