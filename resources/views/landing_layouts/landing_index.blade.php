@@ -7,7 +7,7 @@
   <body class="d-flex flex-column min-vh-100">
     @include('landing_includes.landing_nav')
       <div class=" flex-grow-1 d-flex align-items-center justify-content-center">
-          <div class="col-md-6 col-lg-4">
+          <div class="col-md-6 col-lg-6">
               @yield('content')
           </div>
       </div>
